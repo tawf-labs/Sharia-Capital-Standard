@@ -37,6 +37,18 @@ jobs:
       - name: Check formatting
         run: forge fmt --check
 
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Run Aderyn
+        uses: Cyfrin/aderyn-ci@v0
+        with:
+          fail-on: high
+
   build:
     runs-on: ubuntu-latest
     steps:

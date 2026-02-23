@@ -191,7 +191,34 @@ Implements AAOIFI Governance Standard #3:
 - Invariant testing
 - ReentrancyGuard protection
 - Role-based access control
+- Static analysis via [Aderyn](https://github.com/Cyfrin/aderyn) in CI
 - External audit recommended before production use
+
+### Security Analysis
+
+This project uses [Aderyn](https://github.com/Cyfrin/aderyn), a Rust-based Solidity static analyzer by Cyfrin, to automatically detect potential vulnerabilities in the codebase.
+
+**Automated CI Checks:**
+- Aderyn runs automatically on every push and pull request
+- Builds fail on high-severity findings
+- Analysis reports are available in GitHub Actions logs
+
+**Local Analysis (Optional):**
+
+Developers can run Aderyn locally for immediate feedback:
+
+```bash
+# Install Aderyn (requires Rust)
+cargo install aderyn
+
+# Run analysis on the project
+aderyn .
+
+# View the generated report
+cat report.md
+```
+
+For more information, see the [Aderyn documentation](https://cyfrin.gitbook.io/cyfrin-docs).
 
 See [SECURITY.md](SECURITY.md) for reporting vulnerabilities.
 
