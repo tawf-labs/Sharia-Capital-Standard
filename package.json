@@ -1,5 +1,5 @@
 {
-  "name": "@sharia-capital/standard",
+  "name": "sharia-capital-standard",
   "version": "0.1.0",
   "description": "Open infrastructure-grade risk-sharing capital formation primitive implementing AAOIFI standards",
   "keywords": ["sharia", "islamic-finance", "mudarabah", "musharakah", "aaoifi", "defi", "solidity", "solana"],

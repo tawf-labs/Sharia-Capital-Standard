@@ -73,25 +73,25 @@ import "@sharia-capital/SCS5/AAOIFIGovernance.sol";
 Install via npm:
 
 ```bash
-npm install @sharia-capital/standard
+npm install sharia-capital-standard
 # or
-yarn add @sharia-capital/standard
+yarn add sharia-capital-standard
 ```
 
 Import in your contracts (clean style):
 ```solidity
-import "@sharia-capital/standard/SCS1/MudarabahPool.sol";
-import "@sharia-capital/standard/interfaces/ISCS1.sol";
+import "sharia-capital-standard/SCS1/MudarabahPool.sol";
+import "sharia-capital-standard/interfaces/ISCS1.sol";
 ```
 
 Or use direct paths:
 ```solidity
-import "@sharia-capital/standard/evm/src/SCS1/MudarabahPool.sol";
+import "sharia-capital-standard/evm/src/SCS1/MudarabahPool.sol";
 ```
 
 Access ABIs in JavaScript/TypeScript:
 ```javascript
-const MudarabahPoolABI = require('@sharia-capital/standard/evm/out/MudarabahPool.sol/MudarabahPool.json');
+const MudarabahPoolABI = require('sharia-capital-standard/evm/out/MudarabahPool.sol/MudarabahPool.json');
 ```
 
 ### For Development
