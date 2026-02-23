@@ -13,6 +13,7 @@ node_modules/
 PHASE-*.md
 phase*.sh
 verify.sh
+verify-fixes.sh
 STATUS.md
 PROJECT-SUMMARY.md
 FINAL-STATUS.md
@@ -25,7 +26,7 @@ SUCCESS.sh
 start-here.sh
 FIXES-APPLIED.md
 IMPLEMENTATION-COMPLETE.md
-verify-fixes.sh
+QUICKSTART.md
 
 # Build artifacts
 cache/solidity-files-cache.json
