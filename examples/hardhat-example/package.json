@@ -11,6 +11,6 @@
     "hardhat": "^2.19.0"
   },
   "dependencies": {
-    "@sharia-capital/standard": "^0.1.0"
+    "@tawf-labs/sharia-capital-standard": "^0.1.0"
   }
 }

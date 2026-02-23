@@ -40,7 +40,7 @@ cat > contracts/Test.sol << 'EOF'
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.26;
 
-import "@sharia-capital/standard/SCS1/MudarabahPool.sol";
+import "@tawf-labs/sharia-capital-standard/SCS1/MudarabahPool.sol";
 
 contract Test {
     function test() external pure returns (string memory) {
@@ -74,19 +74,19 @@ mkdir test-foundry && cd test-foundry
 forge init --no-git
 
 # Install from local tarball (requires extracting first)
-mkdir -p lib/@sharia-capital
-tar -xzf ../sharia-capital-standard-0.1.0.tgz -C lib/@sharia-capital
-mv lib/@sharia-capital/package lib/@sharia-capital/standard
+mkdir -p lib/@tawf-labs
+tar -xzf ../sharia-capital-standard-0.1.0.tgz -C lib/@tawf-labs
+mv lib/@tawf-labs/package lib/@tawf-labs/sharia-capital-standard
 
 # Add remapping
-echo "@sharia-capital/standard/=lib/@sharia-capital/standard/evm/src/" > remappings.txt
+echo "@tawf-labs/sharia-capital-standard/=lib/@tawf-labs/sharia-capital-standard/evm/src/" > remappings.txt
 
 # Create test contract
 cat > src/Test.sol << 'EOF'
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.26;
 
-import "@sharia-capital/standard/SCS1/MudarabahPool.sol";
+import "@tawf-labs/sharia-capital-standard/SCS1/MudarabahPool.sol";
 
 contract Test {
     function test() external pure returns (string memory) {
@@ -145,7 +145,7 @@ forge build
 npm publish --registry http://localhost:4873
 
 # Verify publication
-npm view @sharia-capital/standard --registry http://localhost:4873
+npm view @tawf-labs/sharia-capital-standard --registry http://localhost:4873
 ```
 
 ### Test Installation from Verdaccio
@@ -156,13 +156,13 @@ mkdir test-verdaccio && cd test-verdaccio
 npm init -y
 
 # Install from local registry
-npm install @sharia-capital/standard --registry http://localhost:4873
+npm install @tawf-labs/sharia-capital-standard --registry http://localhost:4873
 
 # Verify installation
-ls node_modules/@sharia-capital/standard
+ls node_modules/@tawf-labs/sharia-capital-standard
 
 # Check imports work
-node -e "console.log(require('@sharia-capital/standard/package.json').version)"
+node -e "console.log(require('@tawf-labs/sharia-capital-standard/package.json').version)"
 
 # Clean up
 cd .. && rm -rf test-verdaccio
@@ -199,12 +199,12 @@ Use the provided test scripts:
 - ✅ Package size < 5MB
 
 ### Import Paths
-- ✅ Clean imports work: `@sharia-capital/standard/SCS1/MudarabahPool.sol`
-- ✅ Direct imports work: `@sharia-capital/standard/evm/src/SCS1/MudarabahPool.sol`
-- ✅ Interface imports work: `@sharia-capital/standard/interfaces/ISCS1.sol`
+- ✅ Clean imports work: `@tawf-labs/sharia-capital-standard/SCS1/MudarabahPool.sol`
+- ✅ Direct imports work: `@tawf-labs/sharia-capital-standard/evm/src/SCS1/MudarabahPool.sol`
+- ✅ Interface imports work: `@tawf-labs/sharia-capital-standard/interfaces/ISCS1.sol`
 
 ### ABIs Accessible
-- ✅ Can require ABIs: `require('@sharia-capital/standard/evm/out/MudarabahPool.sol/MudarabahPool.json')`
+- ✅ Can require ABIs: `require('@tawf-labs/sharia-capital-standard/evm/out/MudarabahPool.sol/MudarabahPool.json')`
 - ✅ ABIs contain correct contract data
 
 ### Compilation
@@ -241,6 +241,6 @@ After successful local testing:
 2. Create git tag: `git tag v0.1.0`
 3. Push tag: `git push origin v0.1.0`
 4. Publish to npm: `npm publish --access public`
-5. Verify on npmjs.com: https://www.npmjs.com/package/@sharia-capital/standard
+5. Verify on npmjs.com: https://www.npmjs.com/package/@tawf-labs/sharia-capital-standard
 
 See [PUBLISHING.md](./PUBLISHING.md) for the complete publishing workflow.

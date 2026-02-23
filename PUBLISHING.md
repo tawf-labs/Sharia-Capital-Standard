@@ -5,7 +5,7 @@ This guide is for maintainers who want to publish new versions of Sharia Capital
 ## Prerequisites
 
 - Write access to GitHub repository
-- npm account with access to `@sharia-capital` organization
+- npm account with access to `@tawf-labs` organization
 - Foundry installed
 - All tests passing
 
@@ -59,7 +59,7 @@ npm publish --registry http://localhost:4873
 # Test installation
 mkdir test-verdaccio && cd test-verdaccio
 npm init -y
-npm install @sharia-capital/standard --registry http://localhost:4873
+npm install @tawf-labs/sharia-capital-standard --registry http://localhost:4873
 cd ..
 rm -rf test-verdaccio
 ```
@@ -89,7 +89,7 @@ npm login
 npm publish --access public
 
 # Verify publication
-npm view @sharia-capital/standard
+npm view @tawf-labs/sharia-capital-standard
 ```
 
 ### 5. Create GitHub Release
@@ -115,13 +115,13 @@ forge install tawf-labs/Sharia-Capital-Standard@v0.2.0
 ### Verify npm package
 ```bash
 # Check package info
-npm view @sharia-capital/standard
+npm view @tawf-labs/sharia-capital-standard
 
 # Test installation
 mkdir verify-npm && cd verify-npm
 npm init -y
-npm install @sharia-capital/standard
-ls node_modules/@sharia-capital/standard
+npm install @tawf-labs/sharia-capital-standard
+ls node_modules/@tawf-labs/sharia-capital-standard
 cd .. && rm -rf verify-npm
 ```
 
@@ -139,8 +139,8 @@ cd .. && rm -rf verify-foundry
 
 ### npm publish fails with 403
 - Ensure you're logged in: `npm whoami`
-- Verify organization access: `npm org ls @sharia-capital`
-- Check package name isn't taken: `npm view @sharia-capital/standard`
+- Verify organization access: `npm org ls @tawf-labs`
+- Check package name isn't taken: `npm view @tawf-labs/sharia-capital-standard`
 
 ### Package size too large
 - Check `.npmignore` is excluding test files
@@ -167,10 +167,10 @@ If a release has critical issues:
 ### npm
 ```bash
 # Deprecate the version
-npm deprecate @sharia-capital/standard@0.2.0 "Critical bug, use 0.1.0"
+npm deprecate @tawf-labs/sharia-capital-standard@0.2.0 "Critical bug, use 0.1.0"
 
 # Or unpublish (within 72 hours)
-npm unpublish @sharia-capital/standard@0.2.0
+npm unpublish @tawf-labs/sharia-capital-standard@0.2.0
 ```
 
 ### Git/Foundry

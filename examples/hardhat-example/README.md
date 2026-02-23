@@ -6,7 +6,7 @@ This example demonstrates how to use Sharia Capital Standard in a Hardhat projec
 
 ```bash
 # Install SCS from npm
-npm install @sharia-capital/standard
+npm install @tawf-labs/sharia-capital-standard
 
 # Install Hardhat dependencies
 npm install
@@ -23,15 +23,15 @@ The example contract `MyHardhatStrategy.sol` shows how to:
 
 ### Clean imports (recommended)
 ```solidity
-import "@sharia-capital/standard/SCS1/MudarabahPool.sol";
-import "@sharia-capital/standard/SCS2/MusharakahPool.sol";
-import "@sharia-capital/standard/interfaces/ISCS1.sol";
+import "@tawf-labs/sharia-capital-standard/SCS1/MudarabahPool.sol";
+import "@tawf-labs/sharia-capital-standard/SCS2/MusharakahPool.sol";
+import "@tawf-labs/sharia-capital-standard/interfaces/ISCS1.sol";
 ```
 
 ### Direct path imports (backward compatible)
 ```solidity
-import "@sharia-capital/standard/evm/src/SCS1/MudarabahPool.sol";
-import "@sharia-capital/standard/evm/src/SCS2/MusharakahPool.sol";
+import "@tawf-labs/sharia-capital-standard/evm/src/SCS1/MudarabahPool.sol";
+import "@tawf-labs/sharia-capital-standard/evm/src/SCS2/MusharakahPool.sol";
 ```
 
 ## Compile
@@ -44,5 +44,5 @@ npx hardhat compile
 
 ABIs are available in the package:
 ```javascript
-const MudarabahPoolABI = require('@sharia-capital/standard/evm/out/MudarabahPool.sol/MudarabahPool.json');
+const MudarabahPoolABI = require('@tawf-labs/sharia-capital-standard/evm/out/MudarabahPool.sol/MudarabahPool.json');
 ```

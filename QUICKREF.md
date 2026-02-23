@@ -14,7 +14,7 @@ Add to `remappings.txt`:
 
 ### npm/Hardhat
 ```bash
-npm install @sharia-capital/standard
+npm install @tawf-labs/sharia-capital-standard
 ```
 
 ## Import Examples
@@ -31,20 +31,20 @@ import "@sharia-capital/interfaces/ISCS1.sol";
 
 ### Hardhat/npm (Clean)
 ```solidity
-import "@sharia-capital/standard/SCS1/MudarabahPool.sol";
-import "@sharia-capital/standard/SCS2/MusharakahPool.sol";
-import "@sharia-capital/standard/interfaces/ISCS1.sol";
+import "@tawf-labs/sharia-capital-standard/SCS1/MudarabahPool.sol";
+import "@tawf-labs/sharia-capital-standard/SCS2/MusharakahPool.sol";
+import "@tawf-labs/sharia-capital-standard/interfaces/ISCS1.sol";
 ```
 
 ### Hardhat/npm (Direct)
 ```solidity
-import "@sharia-capital/standard/evm/src/SCS1/MudarabahPool.sol";
+import "@tawf-labs/sharia-capital-standard/evm/src/SCS1/MudarabahPool.sol";
 ```
 
 ## Access ABIs (JavaScript)
 ```javascript
-const MudarabahPoolABI = require('@sharia-capital/standard/evm/out/MudarabahPool.sol/MudarabahPool.json');
-const MusharakahPoolABI = require('@sharia-capital/standard/evm/out/MusharakahPool.sol/MusharakahPool.json');
+const MudarabahPoolABI = require('@tawf-labs/sharia-capital-standard/evm/out/MudarabahPool.sol/MudarabahPool.json');
+const MusharakahPoolABI = require('@tawf-labs/sharia-capital-standard/evm/out/MusharakahPool.sol/MusharakahPool.json');
 ```
 
 ## Basic Usage
@@ -109,5 +109,5 @@ VaultEngine vault = new VaultEngine(
 ## Links
 
 - **GitHub**: https://github.com/tawf-labs/Sharia-Capital-Standard
-- **npm**: https://www.npmjs.com/package/@sharia-capital/standard
+- **npm**: https://www.npmjs.com/package/@tawf-labs/sharia-capital-standard
 - **Issues**: https://github.com/tawf-labs/Sharia-Capital-Standard/issues

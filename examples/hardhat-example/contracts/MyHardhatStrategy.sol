@@ -2,11 +2,11 @@
 pragma solidity ^0.8.26;
 
 // Clean import style
-import "@sharia-capital/standard/SCS1/MudarabahPool.sol";
-import "@sharia-capital/standard/SCS4/SCSEnforcement.sol";
+import "@tawf-labs/sharia-capital-standard/SCS1/MudarabahPool.sol";
+import "@tawf-labs/sharia-capital-standard/SCS4/SCSEnforcement.sol";
 
 // Alternative: Direct path import
-// import "@sharia-capital/standard/evm/src/SCS1/MudarabahPool.sol";
+// import "@tawf-labs/sharia-capital-standard/evm/src/SCS1/MudarabahPool.sol";
 
 contract MyHardhatStrategy {
     MudarabahPool public pool;
