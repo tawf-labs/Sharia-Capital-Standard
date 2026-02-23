@@ -22,3 +22,8 @@ phase5-verify.sh
 phase6-verify.sh
 STATUS.md
 verify.sh
+PROJECT-SUMMARY.md
+phase7-verify.sh
+PHASE-7-COMPLETE.md
+FINAL-STATUS.md
+cache/solidity-files-cache.json
