@@ -1,0 +1,41 @@
+# Test files
+evm/test/
+*.test.sol
+
+# Scripts and verification
+evm/script/
+*.sh
+phase*.sh
+verify.sh
+
+# Cache and build artifacts
+cache/
+evm/cache/
+evm/lib/
+.forge-snapshots/
+
+# Documentation (keep only README and LICENSE)
+docs/
+*.md
+!README.md
+!LICENSE
+
+# Development files
+.github/
+.git/
+.gitignore
+.gitmodules
+.claude/
+node_modules/
+.env
+*.log
+.DS_Store
+
+# Foundry config (users will have their own)
+foundry.toml
+remappings.txt
+foundry.lock
+
+# Keep only source and compiled artifacts
+!evm/src/
+!evm/out/

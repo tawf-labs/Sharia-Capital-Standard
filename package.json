@@ -4,7 +4,35 @@
   "description": "Open infrastructure-grade risk-sharing capital formation primitive implementing AAOIFI standards",
   "keywords": ["sharia", "islamic-finance", "mudarabah", "musharakah", "aaoifi", "defi", "solidity", "solana"],
   "license": "MIT",
+  "author": "Tawf Labs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tawf-labs/Sharia-Capital-Standard.git"
+  },
+  "homepage": "https://github.com/tawf-labs/Sharia-Capital-Standard#readme",
+  "bugs": {
+    "url": "https://github.com/tawf-labs/Sharia-Capital-Standard/issues"
+  },
+  "files": [
+    "evm/src/**/*.sol",
+    "evm/out/**/*.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    "./SCS1/*": "./evm/src/SCS1/*",
+    "./SCS2/*": "./evm/src/SCS2/*",
+    "./SCS3/*": "./evm/src/SCS3/*",
+    "./SCS4/*": "./evm/src/SCS4/*",
+    "./SCS5/*": "./evm/src/SCS5/*",
+    "./interfaces/*": "./evm/src/interfaces/*",
+    "./libraries/*": "./evm/src/libraries/*",
+    "./evm/src/*": "./evm/src/*",
+    "./evm/out/*": "./evm/out/*",
+    "./package.json": "./package.json"
+  },
   "scripts": {
+    "prepublishOnly": "forge build",
     "test": "forge test",
     "test:coverage": "forge coverage",
     "test:gas": "forge test --gas-report",

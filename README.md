@@ -44,18 +44,62 @@ Sharia-Capital-Standard/
     └── programs/
 ```
 
-## Quick Start
+## Installation
 
-### Prerequisites
+### For Foundry Projects (Recommended)
 
-- [Foundry](https://getfoundry.sh/)
-- Solidity 0.8.26+
-
-### Installation
+Install as a Foundry dependency:
 
 ```bash
-# Clone repository
-git clone https://github.com/yourusername/Sharia-Capital-Standard.git
+forge install tawf-labs/Sharia-Capital-Standard
+```
+
+Add to your `remappings.txt`:
+```
+@sharia-capital/=lib/Sharia-Capital-Standard/evm/src/
+```
+
+Import in your contracts:
+```solidity
+import "@sharia-capital/SCS1/MudarabahPool.sol";
+import "@sharia-capital/SCS2/MusharakahPool.sol";
+import "@sharia-capital/SCS3/VaultEngine.sol";
+import "@sharia-capital/SCS4/SCSEnforcement.sol";
+import "@sharia-capital/SCS5/AAOIFIGovernance.sol";
+```
+
+### For Hardhat/npm Projects
+
+Install via npm:
+
+```bash
+npm install @sharia-capital/standard
+# or
+yarn add @sharia-capital/standard
+```
+
+Import in your contracts (clean style):
+```solidity
+import "@sharia-capital/standard/SCS1/MudarabahPool.sol";
+import "@sharia-capital/standard/interfaces/ISCS1.sol";
+```
+
+Or use direct paths:
+```solidity
+import "@sharia-capital/standard/evm/src/SCS1/MudarabahPool.sol";
+```
+
+Access ABIs in JavaScript/TypeScript:
+```javascript
+const MudarabahPoolABI = require('@sharia-capital/standard/evm/out/MudarabahPool.sol/MudarabahPool.json');
+```
+
+### For Development
+
+Clone the repository to contribute or run tests:
+
+```bash
+git clone https://github.com/tawf-labs/Sharia-Capital-Standard.git
 cd Sharia-Capital-Standard
 
 # Install dependencies

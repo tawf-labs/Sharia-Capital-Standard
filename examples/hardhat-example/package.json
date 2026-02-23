@@ -1,0 +1,16 @@
+{
+  "name": "hardhat-scs-example",
+  "version": "1.0.0",
+  "description": "Example Hardhat project using Sharia Capital Standard",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.19.0"
+  },
+  "dependencies": {
+    "@sharia-capital/standard": "^0.1.0"
+  }
+}
