@@ -1,0 +1,2 @@
+@openzeppelin/=evm/lib/openzeppelin-contracts/
+forge-std/=evm/lib/forge-std/src/

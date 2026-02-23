@@ -1,0 +1,19 @@
+{
+  "name": "@sharia-capital/standard",
+  "version": "0.1.0",
+  "description": "Open infrastructure-grade risk-sharing capital formation primitive implementing AAOIFI standards",
+  "keywords": ["sharia", "islamic-finance", "mudarabah", "musharakah", "aaoifi", "defi", "solidity", "solana"],
+  "license": "MIT",
+  "scripts": {
+    "test": "forge test",
+    "test:coverage": "forge coverage",
+    "test:gas": "forge test --gas-report",
+    "build": "forge build",
+    "clean": "forge clean",
+    "format": "forge fmt",
+    "lint": "solhint 'evm/src/**/*.sol'"
+  },
+  "devDependencies": {
+    "solhint": "^4.1.1"
+  }
+}

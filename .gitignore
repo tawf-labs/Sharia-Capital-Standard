@@ -1,0 +1,24 @@
+evm/lib/
+evm/out/
+evm/cache/
+node_modules/
+.env
+*.log
+.DS_Store
+
+# Keep empty directories
+!.gitkeep
+PHASE-1-SUMMARY.md
+PHASE-2-COMPLETE.md
+PHASE-2-SUMMARY.md
+PHASE-3-COMPLETE.md
+PHASE-4-COMPLETE.md
+PHASE-5-COMPLETE.md
+PHASE-6-COMPLETE.md
+phase2-verify.sh
+phase3-verify.sh
+phase4-verify.sh
+phase5-verify.sh
+phase6-verify.sh
+STATUS.md
+verify.sh
