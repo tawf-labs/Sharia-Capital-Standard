@@ -9,7 +9,7 @@ import {ISCS2} from "../interfaces/ISCS2.sol";
 import {ISCS4} from "../interfaces/ISCS4.sol";
 
 /// @title MusharakahPool
-/// @notice AAOIFI Sharia Standard #12 compliant joint venture pool
+/// @notice Joint venture pool based on AAOIFI Sharia Standard #12
 /// @dev Multi-partner profit-sharing with proportional loss allocation
 contract MusharakahPool is ISCS2, ERC20, ReentrancyGuard {
     using SafeERC20 for IERC20;

@@ -5,7 +5,7 @@ import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 import {ISCS5} from "../interfaces/ISCS5.sol";
 
 /// @title ShariaBoard
-/// @notice Sharia Supervisory Board (SSB) implementation per AAOIFI Governance Standard #3
+/// @notice Sharia Supervisory Board (SSB) implementation based on AAOIFI Governance Standard #3
 /// @dev Multi-signature approval system for Sharia compliance oversight
 contract ShariaBoard is ISCS5, Ownable {
     enum ProposalType {

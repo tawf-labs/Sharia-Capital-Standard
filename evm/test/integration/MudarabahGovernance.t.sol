@@ -5,7 +5,7 @@ import {Test} from "forge-std/Test.sol";
 import {MudarabahPool} from "../../src/SCS1/MudarabahPool.sol";
 import {MudarabahFactory} from "../../src/SCS1/MudarabahFactory.sol";
 import {ShariaBoard} from "../../src/SCS5/ShariaBoard.sol";
-import {AAOIFIGovernance} from "../../src/SCS5/AAOIFIGovernance.sol";
+import {ShariaGovernance} from "../../src/SCS5/ShariaGovernance.sol";
 import {SCSEnforcement} from "../../src/SCS4/SCSEnforcement.sol";
 import {ERC20Mock} from "@openzeppelin/contracts/mocks/token/ERC20Mock.sol";
 
@@ -15,7 +15,7 @@ contract MudarabahGovernanceIntegrationTest is Test {
     MudarabahPool public pool;
     MudarabahFactory public factory;
     ShariaBoard public board;
-    AAOIFIGovernance public governance;
+    ShariaGovernance public governance;
     SCSEnforcement public enforcement;
     ERC20Mock public asset;
 
@@ -41,7 +41,7 @@ contract MudarabahGovernanceIntegrationTest is Test {
         board = new ShariaBoard(members, 2);
 
         // Deploy governance
-        governance = new AAOIFIGovernance(address(board));
+        governance = new ShariaGovernance(address(board));
         
         // Screen asset as compliant (before transferring ownership)
         governance.screenAsset(address(asset), true, "Stablecoin - Compliant");
@@ -198,7 +198,7 @@ contract MudarabahGovernanceIntegrationTest is Test {
         board.executeProposal(proposalId);
 
         // Asset should now be prohibited
-        vm.expectRevert(AAOIFIGovernance.AssetIsProhibited.selector);
+        vm.expectRevert(ShariaGovernance.AssetIsProhibited.selector);
         governance.validateAsset(address(asset));
     }
 

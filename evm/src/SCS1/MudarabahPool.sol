@@ -9,7 +9,7 @@ import {ISCS1} from "../interfaces/ISCS1.sol";
 import {ISCS4} from "../interfaces/ISCS4.sol";
 
 /// @title MudarabahPool
-/// @notice AAOIFI Sharia Standard #8 compliant Mudarabah implementation
+/// @notice Mudarabah implementation based on AAOIFI Sharia Standard #8
 /// @dev Manager-investor profit-sharing pool with NAV-based accounting
 contract MudarabahPool is ISCS1, ERC20, ReentrancyGuard {
     using SafeERC20 for IERC20;

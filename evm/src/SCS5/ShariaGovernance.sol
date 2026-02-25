@@ -4,10 +4,17 @@ pragma solidity 0.8.26;
 import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 import {ISCS5} from "../interfaces/ISCS5.sol";
 
-/// @title AAOIFIGovernance
-/// @notice AAOIFI Governance Standard #3 compliance layer
-/// @dev Integrates with ShariaBoard for compliance oversight
-contract AAOIFIGovernance is Ownable {
+/**
+ * @title ShariaGovernance
+ * @notice Sharia Governance compliance layer based on AAOIFI Governance Standard #3
+ * @dev Integrates with ShariaBoard for compliance oversight
+ * 
+ * IMPORTANT: This is part of the TAWF Sharia Standard, based on AAOIFI standards
+ * but NOT officially approved or endorsed by AAOIFI. This contract is designed based on
+ * AAOIFI Governance Standard #3 principles for blockchain-based Islamic finance. Users must
+ * obtain independent Sharia Supervisory Board approval before production use.
+ */
+contract ShariaGovernance is Ownable {
     ISCS5 public shariaBoard;
     
     mapping(address => bool) public prohibitedAssets;

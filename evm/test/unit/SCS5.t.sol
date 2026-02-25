@@ -3,12 +3,12 @@ pragma solidity 0.8.26;
 
 import {Test} from "forge-std/Test.sol";
 import {ShariaBoard} from "../../src/SCS5/ShariaBoard.sol";
-import {AAOIFIGovernance} from "../../src/SCS5/AAOIFIGovernance.sol";
+import {ShariaGovernance} from "../../src/SCS5/ShariaGovernance.sol";
 import {ISCS5} from "../../src/interfaces/ISCS5.sol";
 
 contract SCS5Test is Test {
     ShariaBoard public board;
-    AAOIFIGovernance public governance;
+    ShariaGovernance public governance;
 
     address public owner = address(this);
     address public member1 = makeAddr("member1");
@@ -23,7 +23,7 @@ contract SCS5Test is Test {
         members[2] = member3;
 
         board = new ShariaBoard(members, 2); // 2 of 3 required
-        governance = new AAOIFIGovernance(address(board));
+        governance = new ShariaGovernance(address(board));
     }
 
     function test_BoardCreation() public view {
@@ -166,19 +166,19 @@ contract SCS5Test is Test {
         address asset = makeAddr("asset");
         governance.prohibitAsset(asset);
 
-        vm.expectRevert(AAOIFIGovernance.AssetIsProhibited.selector);
+        vm.expectRevert(ShariaGovernance.AssetIsProhibited.selector);
         governance.validateAsset(asset);
     }
 
     function test_RevertWhen_AssetNotScreened() public {
         address asset = makeAddr("asset");
 
-        vm.expectRevert(AAOIFIGovernance.AssetNotScreened.selector);
+        vm.expectRevert(ShariaGovernance.AssetNotScreened.selector);
         governance.validateAsset(asset);
     }
 
     function test_RevertWhen_DebtRatioExceeded() public {
-        vm.expectRevert(AAOIFIGovernance.RatioExceeded.selector);
+        vm.expectRevert(ShariaGovernance.RatioExceeded.selector);
         governance.validateFinancialRatios(1000e18, 400e18, 200e18); // 40% debt
     }
 

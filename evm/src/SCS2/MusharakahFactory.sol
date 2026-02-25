@@ -5,7 +5,7 @@ import {MusharakahPool} from "./MusharakahPool.sol";
 import {ISCS4} from "../interfaces/ISCS4.sol";
 
 /// @title MusharakahFactory
-/// @notice Factory for creating AAOIFI-compliant Musharakah pools
+/// @notice Factory for creating Sharia-compliant Musharakah pools (based on AAOIFI standards)
 contract MusharakahFactory {
     ISCS4 public immutable enforcement;
     address[] public pools;

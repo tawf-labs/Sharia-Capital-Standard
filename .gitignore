@@ -36,3 +36,10 @@ PUBLISHING-STATUS.md
 PUBLISHED-SUCCESS.md
 publish-now.sh
 test-*.sh
+
+# Internal documentation and updates
+*-UPDATE.md
+*-TERMINOLOGY-*.md
+*-NAMING-*.md
+AAOIFI-*.md
+TAWF-*.md

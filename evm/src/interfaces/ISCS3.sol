@@ -5,7 +5,7 @@ import {IERC4626} from "@openzeppelin/contracts/interfaces/IERC4626.sol";
 
 /**
  * @title ISCS3
- * @notice Interface for Profit-Sharing Vault Engine per AAOIFI FAS #27
+ * @notice Interface for Profit-Sharing Vault Engine based on AAOIFI FAS #27
  * @dev Extends ERC-4626 with epoch-based accounting and NAV calculation
  */
 interface ISCS3 is IERC4626 {

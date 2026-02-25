@@ -25,7 +25,7 @@ contract SCSEnforcementTest is Test {
     function test_ValidateDeployment_RejectsGuaranteedReturn() public view {
         ISCS4.ValidationResult memory result = enforcement.validateDeployment(1000 ether, 100 ether);
         assertFalse(result.isCompliant);
-        assertEq(result.reason, "Guaranteed returns prohibited by AAOIFI");
+        assertEq(result.reason, "Guaranteed returns prohibited (based on AAOIFI standards)");
     }
 
     function test_ValidateDeployment_RejectsZeroAmount() public view {
@@ -73,7 +73,7 @@ contract SCSEnforcementTest is Test {
         ISCS4.ValidationResult memory result =
             enforcement.validateLossAllocation(partnerCapital, totalCapital, partnerLoss, totalLoss);
         assertFalse(result.isCompliant);
-        assertEq(result.reason, "Loss allocation must be proportional to capital (AAOIFI Sharia #12)");
+        assertEq(result.reason, "Loss allocation must be proportional to capital (based on AAOIFI Sharia #12)");
     }
 
     function test_RegisterContract_Success() public {

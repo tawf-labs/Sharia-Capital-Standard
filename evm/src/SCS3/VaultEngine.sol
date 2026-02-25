@@ -12,7 +12,7 @@ import {ISCS3} from "../interfaces/ISCS3.sol";
 import {ISCS4} from "../interfaces/ISCS4.sol";
 
 /// @title VaultEngine
-/// @notice AAOIFI compliant ERC-4626 tokenized vault with epoch-based accounting
+/// @notice ERC-4626 tokenized vault with epoch-based accounting (based on AAOIFI standards)
 /// @dev Multi-strategy vault with NAV calculation and performance tracking
 contract VaultEngine is ISCS3, ERC4626, ReentrancyGuard, Ownable {
     using SafeERC20 for IERC20;

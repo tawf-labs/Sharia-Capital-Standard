@@ -3,8 +3,8 @@ pragma solidity ^0.8.26;
 
 /**
  * @title ISCS1
- * @notice Interface for Mudarabah (profit-sharing) contracts per AAOIFI Sharia Standard #8
- * @dev Implements manager-investor profit-sharing model with strict AAOIFI compliance
+ * @notice Interface for Mudarabah (profit-sharing) contracts based on AAOIFI Sharia Standard #8
+ * @dev Implements manager-investor profit-sharing model based on AAOIFI principles
  */
 interface ISCS1 {
     /// @notice Emitted when capital is deposited by Rabb al-Mal (capital provider)

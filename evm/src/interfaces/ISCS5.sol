@@ -3,7 +3,7 @@ pragma solidity ^0.8.26;
 
 /**
  * @title ISCS5
- * @notice Interface for AAOIFI Governance & Sharia Supervisory Board per Governance Standard #3
+ * @notice Interface for Sharia Governance & Sharia Supervisory Board based on AAOIFI Governance Standard #3
  * @dev Implements SSB oversight, multi-signature approval, and compliance validation
  */
 interface ISCS5 {
@@ -16,7 +16,7 @@ interface ISCS5 {
         uint256 timestamp;
     }
 
-    /// @notice Financial ratios for AAOIFI compliance
+    /// @notice Financial ratios for Sharia compliance (based on AAOIFI standards)
     struct FinancialRatios {
         uint256 totalAssets;
         uint256 interestBearingDebt;
@@ -68,15 +68,15 @@ interface ISCS5 {
     /// @return approved Whether strategy has SSB approval
     function isStrategyApproved(bytes32 strategyHash) external view returns (bool approved);
     
-    /// @notice Validate asset against AAOIFI prohibited sectors
+    /// @notice Validate asset against prohibited sectors (based on AAOIFI standards)
     /// @param asset Address of the asset
     /// @return allowed Whether asset is allowed
     /// @return reason Reason if not allowed
     function validateAsset(address asset) external view returns (bool allowed, string memory reason);
     
-    /// @notice Check financial ratios for AAOIFI compliance
+    /// @notice Check financial ratios for Sharia compliance (based on AAOIFI standards)
     /// @param ratios Financial ratios to validate
-    /// @return compliant Whether ratios meet AAOIFI standards
+    /// @return compliant Whether ratios meet Sharia standards
     /// @return reason Reason if not compliant
     function checkFinancialRatios(FinancialRatios calldata ratios) 
         external 

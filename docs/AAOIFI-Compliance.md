@@ -1,15 +1,17 @@
-# AAOIFI Compliance Guide
+# AAOIFI Standards Reference Guide
 
 ## Overview
 
-This guide explains how the Sharia Capital Standard (SCS) implements AAOIFI (Accounting and Auditing Organization for Islamic Financial Institutions) standards for blockchain-based Islamic finance.
+> **Important Notice**: This is the **TAWF Sharia Standard**, based on AAOIFI standards but **not officially approved or endorsed by AAOIFI**. This guide explains how the Sharia Capital Standard (SCS) is designed based on AAOIFI (Accounting and Auditing Organization for Islamic Financial Institutions) principles for blockchain-based Islamic finance. Users must obtain independent Sharia Supervisory Board approval before production use.
 
-## Implemented AAOIFI Standards
+This guide explains how the Sharia Capital Standard (SCS) is based on AAOIFI (Accounting and Auditing Organization for Islamic Financial Institutions) standards for blockchain-based Islamic finance.
+
+## AAOIFI Standards Reference
 
 ### Sharia Standards
 
 #### AAOIFI Sharia Standard #8: Mudarabah
-**Implementation**: SCS-1 (Mudarabah Pool)
+**SCS Implementation**: SCS-1 (Mudarabah Pool) - based on AAOIFI Sharia Standard #8
 
 **Key Requirements**:
 1. **Essential Elements (Arkan)**:

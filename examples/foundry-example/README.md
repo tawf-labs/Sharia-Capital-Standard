@@ -34,5 +34,5 @@ import "@sharia-capital/SCS1/MudarabahPool.sol";
 import "@sharia-capital/SCS2/MusharakahPool.sol";
 import "@sharia-capital/SCS3/VaultEngine.sol";
 import "@sharia-capital/SCS4/SCSEnforcement.sol";
-import "@sharia-capital/SCS5/AAOIFIGovernance.sol";
+import "@sharia-capital/SCS5/ShariaGovernance.sol";
 ```

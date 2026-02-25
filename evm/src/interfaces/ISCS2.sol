@@ -3,8 +3,8 @@ pragma solidity ^0.8.26;
 
 /**
  * @title ISCS2
- * @notice Interface for Musharakah (joint venture) contracts per AAOIFI Sharia Standard #12
- * @dev Implements joint venture capital model with mandatory proportional loss allocation
+ * @notice Interface for Musharakah (joint venture) contracts based on AAOIFI Sharia Standard #12
+ * @dev Implements joint venture capital model with mandatory proportional loss allocation based on AAOIFI principles
  */
 interface ISCS2 {
     /// @notice Partner information
@@ -49,7 +49,7 @@ interface ISCS2 {
     /// @param totalProfit Total profit to distribute
     function distributeProfit(uint256 totalProfit) external;
     
-    /// @notice Allocate losses proportionally to capital (AAOIFI mandatory)
+    /// @notice Allocate losses proportionally to capital (based on AAOIFI standards)
     /// @param totalLoss Total loss to allocate
     function allocateLoss(uint256 totalLoss) external;
     

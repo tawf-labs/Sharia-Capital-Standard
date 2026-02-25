@@ -43,9 +43,9 @@ All PRs must include:
 - Fuzz tests for mathematical operations
 - Gas benchmarks
 
-## AAOIFI Compliance
+## Sharia Compliance (Based on AAOIFI Standards)
 
-All changes must maintain AAOIFI compliance:
+All changes must maintain Sharia compliance based on AAOIFI standards:
 - No guaranteed returns
 - No fixed-yield structures
 - Proper loss allocation (Musharakah)

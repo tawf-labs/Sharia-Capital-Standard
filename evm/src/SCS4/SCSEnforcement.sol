@@ -7,7 +7,7 @@ import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 /**
  * @title SCSEnforcement
  * @notice Non-Guaranteed Return Enforcement Layer
- * @dev Validates AAOIFI compliance rules for all SCS contracts
+ * @dev Validates Sharia compliance rules based on AAOIFI standards for all SCS contracts
  */
 contract SCSEnforcement is ISCS4, Ownable {
     uint256 private constant BPS_DENOMINATOR = 10000;
@@ -32,7 +32,7 @@ contract SCSEnforcement is ISCS4, Ownable {
         returns (ValidationResult memory result)
     {
         if (expectedReturn != 0) {
-            return ValidationResult({isCompliant: false, reason: "Guaranteed returns prohibited by AAOIFI"});
+            return ValidationResult({isCompliant: false, reason: "Guaranteed returns prohibited (based on AAOIFI standards)"});
         }
         if (amount == 0) {
             return ValidationResult({isCompliant: false, reason: "Deployment amount must be greater than zero"});
@@ -73,7 +73,7 @@ contract SCSEnforcement is ISCS4, Ownable {
         if (diff > 1) {
             return ValidationResult({
                 isCompliant: false,
-                reason: "Loss allocation must be proportional to capital (AAOIFI Sharia #12)"
+                reason: "Loss allocation must be proportional to capital (based on AAOIFI Sharia #12)"
             });
         }
         

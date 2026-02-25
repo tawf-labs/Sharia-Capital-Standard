@@ -4,7 +4,7 @@ pragma solidity ^0.8.26;
 /**
  * @title ISCS4
  * @notice Interface for Non-Guaranteed Return Enforcement Layer
- * @dev Validates and enforces AAOIFI compliance rules across all SCS contracts
+ * @dev Validates and enforces Sharia compliance rules based on AAOIFI standards across all SCS contracts
  */
 interface ISCS4 {
     /// @notice Validation result
