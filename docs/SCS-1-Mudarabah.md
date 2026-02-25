@@ -1,8 +1,11 @@
 # SCS-1: Mudarabah Standard
+### Part of Sharia Capital Standard by TAWF Labs
 
 ## Overview
 
-SCS-1 implements AAOIFI Sharia Standard #8 (Mudarabah) - a profit-sharing partnership between capital provider (Rabb al-Mal) and manager (Mudarib).
+> **Important Notice**: This is part of the **TAWF Sharia Standard**, based on AAOIFI standards but **not officially approved or endorsed by AAOIFI**. Users must obtain independent Sharia Supervisory Board approval before production use.
+
+SCS-1 is based on AAOIFI Sharia Standard #8 (Mudarabah) - a profit-sharing partnership between capital provider (Rabb al-Mal) and manager (Mudarib).
 
 ## Core Principles
 
@@ -61,7 +64,7 @@ function calculateNAV() external view returns (uint256);
 
 ### MudarabahFactory.sol
 
-Factory for creating AAOIFI-compliant pools.
+Factory for creating Sharia-compliant Mudarabah pools (based on AAOIFI standards).
 
 **Functions:**
 

@@ -1,8 +1,11 @@
 # SCS-2: Musharakah Standard
+### Part of Sharia Capital Standard by TAWF Labs
 
 ## Overview
 
-SCS-2 implements AAOIFI Sharia Standard #12 (Musharakah) - a joint venture partnership where multiple partners contribute capital and share profits/losses.
+> **Important Notice**: This is part of the **TAWF Sharia Standard**, based on AAOIFI standards but **not officially approved or endorsed by AAOIFI**. Users must obtain independent Sharia Supervisory Board approval before production use.
+
+SCS-2 is based on AAOIFI Sharia Standard #12 (Musharakah) - a joint venture partnership where multiple partners contribute capital and share profits/losses.
 
 ## Core Principles
 
@@ -32,7 +35,7 @@ ERC-20 compliant multi-partner pool with proportional loss allocation.
 **Key Features:**
 - Multi-partner support (2+ partners)
 - Flexible profit-sharing ratios
-- Proportional loss allocation (AAOIFI compliant)
+- Proportional loss allocation (based on AAOIFI standards)
 - NAV-based share accounting
 - Partner-based access control
 
@@ -58,7 +61,7 @@ function calculateNAV() external view returns (uint256);
 
 ### MusharakahFactory.sol
 
-Factory for creating AAOIFI-compliant Musharakah pools.
+Factory for creating Sharia-compliant Musharakah pools (based on AAOIFI standards).
 
 **Functions:**
 

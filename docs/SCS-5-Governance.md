@@ -1,8 +1,11 @@
-# SCS-5: AAOIFI Governance Standard
+# SCS-5: Sharia Governance Standard
+### Part of Sharia Capital Standard by TAWF Labs
 
 ## Overview
 
-SCS-5 implements AAOIFI Governance Standard #3 with Sharia Supervisory Board (SSB) integration, multi-signature approval system, and compliance oversight.
+> **Important Notice**: This is part of the **TAWF Sharia Standard**, based on AAOIFI standards but **not officially approved or endorsed by AAOIFI**. Users must obtain independent Sharia Supervisory Board approval before production use.
+
+SCS-5 is based on AAOIFI Governance Standard #3 with Sharia Supervisory Board (SSB) integration, multi-signature approval system, and compliance oversight.
 
 ## Core Principles
 
@@ -12,7 +15,7 @@ The SSB is responsible for:
 - **Sharia Compliance Oversight**: Ensuring all operations comply with Islamic law
 - **Investment Approval**: Multi-signature approval for investments
 - **Asset Screening**: Prohibiting non-compliant assets
-- **Financial Ratio Validation**: Ensuring AAOIFI financial standards
+- **Financial Ratio Validation**: Ensuring financial standards based on AAOIFI principles
 - **Fatwa Issuance**: Providing religious rulings on financial matters
 
 ### Multi-Signature Governance
@@ -57,9 +60,9 @@ function isStrategyApproved(bytes32 strategyHash) external view returns (bool);
 function checkFinancialRatios(FinancialRatios calldata ratios) external pure returns (bool, string memory);
 ```
 
-### AAOIFIGovernance.sol
+### ShariaGovernance.sol
 
-Compliance layer for asset screening and financial validation.
+Compliance layer for asset screening and financial validation (based on AAOIFI Governance Standard #3).
 
 **Key Features:**
 - Asset prohibition/permission
@@ -92,7 +95,7 @@ members[1] = scholar2;
 members[2] = scholar3;
 
 ShariaBoard board = new ShariaBoard(members, 2);
-AAOIFIGovernance governance = new AAOIFIGovernance(address(board));
+ShariaGovernance governance = new ShariaGovernance(address(board));
 
 // Transfer ownership to board
 governance.transferOwnership(address(board));
@@ -133,7 +136,7 @@ bool compliant = governance.validateFinancialRatios(
 | Multi-member board | ✅ Configurable members |
 | Quorum-based decisions | ✅ Required approvals |
 | Investment approval | ✅ Proposal system |
-| Asset screening | ✅ AAOIFIGovernance |
+| Asset screening | ✅ ShariaGovernance |
 | Financial ratio validation | ✅ Debt & interest checks |
 | Transparent reporting | ✅ On-chain records |
 

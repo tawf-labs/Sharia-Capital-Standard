@@ -1,8 +1,11 @@
 # Integration Guide
+### Sharia Capital Standard by TAWF Labs
 
 ## Overview
 
-This guide demonstrates how to integrate all Sharia Capital Standard (SCS) components to build complete, AAOIFI-compliant DeFi protocols.
+> **Important Notice**: This is part of the **TAWF Sharia Standard**, based on AAOIFI standards but **not officially approved or endorsed by AAOIFI**. Users must obtain independent Sharia Supervisory Board approval before production use.
+
+This guide demonstrates how to integrate all Sharia Capital Standard (SCS) components to build complete, Sharia-compliant (based on AAOIFI standards) DeFi protocols.
 
 ## Architecture
 
@@ -42,7 +45,7 @@ Complete implementation with SSB oversight.
 // 1. Deploy infrastructure
 SCSEnforcement enforcement = new SCSEnforcement();
 ShariaBoard board = new ShariaBoard(ssbMembers, 2);
-AAOIFIGovernance governance = new AAOIFIGovernance(address(board));
+ShariaGovernance governance = new ShariaGovernance(address(board));
 
 // 2. Screen assets
 governance.screenAsset(usdcAddress, true, "Stablecoin - Compliant");
@@ -147,7 +150,7 @@ scholars[2] = scholar3;
 ShariaBoard board = new ShariaBoard(scholars, 2);
 
 // Deploy governance
-AAOIFIGovernance governance = new AAOIFIGovernance(address(board));
+ShariaGovernance governance = new ShariaGovernance(address(board));
 governance.transferOwnership(address(board));
 ```
 
@@ -330,7 +333,7 @@ function testFullIntegration() public {
 
 - [ ] Deploy SCSEnforcement
 - [ ] Deploy ShariaBoard with SSB members
-- [ ] Deploy AAOIFIGovernance
+- [ ] Deploy ShariaGovernance
 - [ ] Screen all assets
 - [ ] Deploy factories (Mudarabah, Musharakah)
 - [ ] Deploy VaultEngine

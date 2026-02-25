@@ -1,8 +1,11 @@
 # SCS-3: Vault Engine Standard
+### Part of Sharia Capital Standard by TAWF Labs
 
 ## Overview
 
-SCS-3 implements an ERC-4626 compliant tokenized vault with epoch-based accounting, multi-strategy management, and NAV calculation per AAOIFI FAS #27.
+> **Important Notice**: This is part of the **TAWF Sharia Standard**, based on AAOIFI standards but **not officially approved or endorsed by AAOIFI**. Users must obtain independent Sharia Supervisory Board approval before production use.
+
+SCS-3 implements an ERC-4626 compliant tokenized vault with epoch-based accounting, multi-strategy management, and NAV calculation based on AAOIFI FAS #27.
 
 ## Core Principles
 

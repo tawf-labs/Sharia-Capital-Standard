@@ -1,24 +1,28 @@
 # Sharia Capital Standard (SCS)
+### by TAWF Labs
 
 **Open infrastructure-grade risk-sharing capital formation primitive for EVM & SVM networks**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Solidity](https://img.shields.io/badge/Solidity-0.8.26-blue)](https://soliditylang.org/)
 [![Foundry](https://img.shields.io/badge/Built%20with-Foundry-FFDB1C.svg)](https://getfoundry.sh/)
+[![npm version](https://img.shields.io/npm/v/@tawf-labs/sharia-capital-standard.svg)](https://www.npmjs.com/package/@tawf-labs/sharia-capital-standard)
 
 ## Overview
 
-SCS provides production-ready smart contract implementations for Sharia-compliant capital formation, implementing AAOIFI standards for:
+SCS provides production-ready smart contract implementations for Sharia-compliant capital formation, based on AAOIFI standards for:
 
 - **SCS-1**: Mudarabah (manager-investor profit-sharing)
 - **SCS-2**: Musharakah (joint venture capital)
 - **SCS-3**: Profit-Sharing Vault Engine (NAV calculation, epochs)
 - **SCS-4**: Non-Guaranteed Return Enforcement Layer
-- **SCS-5**: AAOIFI Governance & Compliance
+- **SCS-5**: Sharia Governance & Compliance
 
-## AAOIFI Compliance
+> **Important Notice**: This is the **TAWF Sharia Standard**, an open-source implementation based on AAOIFI standards. This framework is **not officially approved or endorsed by AAOIFI**. It is designed as a reference implementation inspired by AAOIFI principles for blockchain-based Islamic finance. Users must obtain independent Sharia Supervisory Board approval before production use.
 
-This project implements standards from the [Accounting and Auditing Organization for Islamic Financial Institutions](https://aaoifi.com/?lang=en):
+## AAOIFI Standards Reference
+
+This project is based on standards from the [Accounting and Auditing Organization for Islamic Financial Institutions](https://aaoifi.com/?lang=en):
 
 - **[Sharia Standard #8](https://aaoifi.com/product/shari-a-standards/?lang=en)**: Mudarabah (profit-sharing partnership)
 - **[Sharia Standard #12](https://aaoifi.com/product/shari-a-standards/?lang=en)**: Musharakah (joint venture)
@@ -65,7 +69,7 @@ import "@sharia-capital/SCS1/MudarabahPool.sol";
 import "@sharia-capital/SCS2/MusharakahPool.sol";
 import "@sharia-capital/SCS3/VaultEngine.sol";
 import "@sharia-capital/SCS4/SCSEnforcement.sol";
-import "@sharia-capital/SCS5/AAOIFIGovernance.sol";
+import "@sharia-capital/SCS5/ShariaGovernance.sol";
 ```
 
 ### For Hardhat/npm Projects
@@ -167,8 +171,8 @@ Ensures Sharia compliance by:
 - Preventing fixed-yield structures
 - Validating profit-sharing ratios
 
-### AAOIFI Governance (SCS-5)
-Implements AAOIFI Governance Standard #3:
+### Sharia Governance (SCS-5)
+Based on AAOIFI Governance Standard #3:
 - Sharia Supervisory Board (SSB) oversight
 - Multi-signature approval for investments
 - Prohibited asset screening

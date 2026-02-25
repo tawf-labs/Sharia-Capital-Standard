@@ -1,7 +1,7 @@
 {
   "name": "@tawf-labs/sharia-capital-standard",
-  "version": "0.1.2",
-  "description": "Open infrastructure-grade risk-sharing capital formation primitive implementing AAOIFI standards",
+  "version": "0.1.3",
+  "description": "Open infrastructure-grade risk-sharing capital formation primitive based on AAOIFI standards",
   "keywords": ["sharia", "islamic-finance", "mudarabah", "musharakah", "aaoifi", "defi", "solidity", "solana"],
   "license": "MIT",
   "author": "Tawf Labs",

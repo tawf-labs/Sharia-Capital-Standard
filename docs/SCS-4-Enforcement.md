@@ -1,12 +1,15 @@
 # SCS-4: Non-Guaranteed Return Enforcement Layer
+### Part of Sharia Capital Standard by TAWF Labs
 
 ## Overview
 
-The SCS-4 Enforcement Layer is a critical compliance component that validates and enforces AAOIFI Sharia standards across all SCS contracts. It prevents prohibited structures like guaranteed returns, fixed yields, and improper loss allocation.
+> **Important Notice**: This is part of the **TAWF Sharia Standard**, based on AAOIFI standards but **not officially approved or endorsed by AAOIFI**. Users must obtain independent Sharia Supervisory Board approval before production use.
 
-## AAOIFI Compliance
+The SCS-4 Enforcement Layer is a critical compliance component that validates and enforces Sharia standards based on AAOIFI principles across all SCS contracts. It prevents prohibited structures like guaranteed returns, fixed yields, and improper loss allocation.
 
-Implements validation rules from:
+## AAOIFI Standards Reference
+
+Based on validation rules from:
 - AAOIFI Sharia Standard #8 (Mudarabah)
 - AAOIFI Sharia Standard #12 (Musharakah)
 - AAOIFI Sharia Standard #17 (Investment Agencies)
@@ -112,7 +115,7 @@ function deregisterContract(address contractAddress) external onlyOwner
 function isCompliantContract(address contractAddress) external view returns (bool)
 ```
 
-Maintains registry of AAOIFI-compliant SCS contracts.
+Maintains registry of Sharia-compliant SCS contracts (based on AAOIFI standards).
 
 **SCS Types**:
 - 1: Mudarabah (SCS-1)
