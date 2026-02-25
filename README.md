@@ -1,5 +1,4 @@
 # Sharia Capital Standard (SCS)
-### by TAWF Labs
 
 **Open infrastructure-grade risk-sharing capital formation primitive for EVM & SVM networks**
 
